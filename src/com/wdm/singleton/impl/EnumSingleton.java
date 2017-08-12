@@ -7,14 +7,40 @@ public enum EnumSingleton {
 
     enumValue;
 
-    private Object object;
+    private InnerClass object;
 
     EnumSingleton() {
         System.out.println("EnumSingleton 构造函数调用");
-        object = new Object();
+        object = new InnerClass();
     }
 
-    public Object getObject() {
+    public InnerClass getObject() {
         return object;
+    }
+
+    public class InnerClass {
+        private int id;
+        private String name;
+
+        private InnerClass() {
+            id = 0;
+            name = "name";
+        }
+
+        public int getId() {
+            return id;
+        }
+
+        public void setId(int id) {
+            this.id = id;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
     }
 }

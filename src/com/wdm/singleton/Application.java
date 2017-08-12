@@ -1,5 +1,6 @@
 package com.wdm.singleton;
 
+import com.wdm.singleton.impl.EnumSingleton;
 import com.wdm.singleton.thread.EnumThread;
 import com.wdm.singleton.thread.FifthThread;
 import com.wdm.singleton.thread.FirstThread;
