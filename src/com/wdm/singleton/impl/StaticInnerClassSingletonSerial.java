@@ -5,6 +5,7 @@ import java.io.Serializable;
 
 /*
  * 静态内部类，由于采用了静态内部类保证了延迟加载，同时采用静态变量保证线程安全
+ * 防止反序列化实例化多个对象出来
  */
 public class StaticInnerClassSingletonSerial implements Serializable {
 

@@ -1,12 +1,12 @@
 package com.wdm.singleton.thread;
 
-import com.wdm.singleton.impl.LazySingletonFirstSyn;
+import com.wdm.singleton.impl.LazySingletonCheckSyn;
 
 public class ThirdThread extends Thread {
 
     @Override
     public void run() {
-        System.out.println(LazySingletonFirstSyn.getInstance().getName() + "\t" 
-                            + LazySingletonFirstSyn.getInstance().hashCode());
+        System.out.println(LazySingletonCheckSyn.getInstance().getName() + "\t"
+                            + LazySingletonCheckSyn.getInstance().hashCode());
     }
 }

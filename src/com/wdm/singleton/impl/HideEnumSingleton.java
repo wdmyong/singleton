@@ -11,7 +11,7 @@ public class HideEnumSingleton {
 
         private Object object;
 
-        private EnumSingleton() {
+        EnumSingleton() {
             System.out.println("HideEnumSingleton -> EnumSingleton -> 构造函数调用");
             object = new Object();
         }

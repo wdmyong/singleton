@@ -5,17 +5,17 @@ package com.wdm.singleton.impl;
  * 非线性安全
  * 
  */
-public class LazySingletonFirst {
+public class LazySingleton {
 
-    private static LazySingletonFirst instance = null;
+    private static LazySingleton instance = null;
 
     private String name;
 
-    private LazySingletonFirst() {
+    private LazySingleton() {
         this.name = "LazyFirstSingleton";
     }
 
-    public static LazySingletonFirst getInstance() {
+    public static LazySingleton getInstance() {
         if (instance == null) {
             // 模拟初始化操作需要时间，在多线程环境下会有出现多个实例
             try {
@@ -23,7 +23,7 @@ public class LazySingletonFirst {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            instance = new LazySingletonFirst();
+            instance = new LazySingleton();
         }
         return instance;
     }
