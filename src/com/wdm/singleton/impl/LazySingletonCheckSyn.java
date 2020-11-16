@@ -7,7 +7,7 @@ package com.wdm.singleton.impl;
  */
 public class LazySingletonCheckSyn {
 
-    private static LazySingletonCheckSyn instance = null;
+    private static volatile LazySingletonCheckSyn instance;
 
     private String name;
 
